@@ -3,15 +3,31 @@
         <title>
             Enter Email to receive invite
         </title>
+        <style>
+            body {
+                background-color: #eee;
+            }
+            .input_email {
+                height: 40px;
+                font-size: 26px;
+                border: 1px solid black;
+            }
+            button {
+                height: 30px;
+                font-size: 26px;
+            }
+        </style>
     </head>
     <body>
         <center>
+            <h2>Twilio Bootcamp Signup!</h2>
+            <p>Enter your <code>@twilio.com</code> email address below</p>
             <form action="/sendinvite/" method="POST">
                 {% csrf_token %}
-                <input type="text" name="email" style="width:95%;height:40px;font-size:26px;">
+                <input class="input_email" type="email" placeholder="email" name="email">
                 <br/>
                 <br/>
-                <button type="submit" style="width:50%;height:30px;font-size:20px;">Get an invite!</button>
+                <button type="submit">Get an invite!</button>
             </form>
         </center>
     </body>
